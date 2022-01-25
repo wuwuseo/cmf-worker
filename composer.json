@@ -1,0 +1,19 @@
+{
+    "name": "wuwuseo/cmf-worker",
+    "authors": [
+        {
+            "name": "五五",
+            "email": "15093565100@613.com"
+        }
+    ],
+    "require": {
+        "topthink/framework": "^6.0.0",
+        "topthink/think-worker": "^3.0",
+        "ext-fileinfo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\worker\\": "src"
+        }
+    }
+}
