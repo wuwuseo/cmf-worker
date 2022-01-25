@@ -5,6 +5,7 @@ namespace cmf\worker\command;
 
 use think\console\Input;
 use think\console\Output;
+use think\facade\Config;
 use think\worker\command\Worker;
 
 class Api extends Worker
@@ -22,7 +23,7 @@ class Api extends Worker
 
     public function execute(Input $input, Output $output)
     {
-        
+        Config::load('worker_api','worker');
         parent::execute($input,$output);
        
     }
