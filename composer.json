@@ -14,7 +14,10 @@
     "autoload": {
         "psr-4": {
             "cmf\\worker\\": "src"
-        }
+        },
+        "classmap": [
+            "src/Request.php"
+        ]
     },
     "extra": {
         "think":{

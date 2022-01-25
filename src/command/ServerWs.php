@@ -16,13 +16,14 @@ class ServerWs extends Server
 
     public function configure()
     {
+        parent::configure();
         $this->setName('worker:server-ws')
             ->setDescription('Workerman Server for ThinkCmf-server-websocket');
     }
 
     public function execute(Input $input, Output $output)
     {
-        Config::load('worker_server_ws','server');
+        Config::load('worker_server_ws','worker_server');
         parent::execute($input,$output);
        
     }
