@@ -20,7 +20,11 @@
         "think":{
             "services":[
                 "cmf\\worker\\Service"
-            ]
+            ],
+            "config":{
+                "worker_web": "src/config/web.php",
+                "worker_api": "src/config/api.php"
+            }
         }
     }
 }
