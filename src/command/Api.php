@@ -23,6 +23,7 @@ class Api extends Worker
 
     public function execute(Input $input, Output $output)
     {
+        define('APP_NAMESPACE', 'api');
         Config::load('worker_api','worker');
         parent::execute($input,$output);
        
