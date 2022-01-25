@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace think\worker\command;
+namespace cmf\worker\command;
 
 use think\console\Input;
 use think\console\Output;
