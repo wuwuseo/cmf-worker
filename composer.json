@@ -23,7 +23,8 @@
             ],
             "config":{
                 "worker_web": "src/config/web.php",
-                "worker_api": "src/config/api.php"
+                "worker_api": "src/config/api.php",
+                "worker_server_ws": "src/config/server_ws.php"
             }
         }
     }

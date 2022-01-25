@@ -10,6 +10,7 @@ class Service extends BaseService
         $this->commands([
             'worker:web'  => '\\cmf\\worker\\command\\Web',
             'worker:api' => '\\cmf\\worker\\command\\Api',
+            'worker:server-ws' => '\\cmf\\worker\\command\\ServerWs',
         ]);
     }
 }
