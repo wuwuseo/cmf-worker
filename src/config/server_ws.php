@@ -44,7 +44,7 @@ return [
     'onMessage'      => function ($connection, $data) {
         $request = json_decode($data);
         switch($request->event){
-            case 'demo/index/index':
+            case 'demo/ws/index':
                 $request->message = $request->arguments->post->message;
                 $connection->send(json_encode($request));
                 break;
