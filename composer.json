@@ -16,7 +16,8 @@
             "cmf\\worker\\": "src"
         },
         "classmap": [
-            "src/Request.php"
+            "src/UploadedFile.php",
+            "src/Http.php"
         ]
     },
     "extra": {
