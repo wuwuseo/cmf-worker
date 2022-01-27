@@ -9,6 +9,7 @@
     "require": {
         "topthink/framework": "^6.0.0",
         "topthink/think-worker": "^3.0",
+        "workerman/workerman": "^4.0.4",
         "ext-fileinfo": "*"
     },
     "autoload": {
