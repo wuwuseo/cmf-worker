@@ -23,7 +23,7 @@ class UploadedFile extends File
     private $mimeType;
     private $error;
 
-    public function __construct(string $path, string $originalName, string $mimeType = null, int $error = null, bool $test = false)
+    public function __construct(string $path, string $originalName, string $mimeType = null, int $error = null, bool $test = true)
     {
         $this->originalName = $originalName;
         $this->mimeType     = $mimeType ?: 'application/octet-stream';

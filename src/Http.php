@@ -535,7 +535,7 @@ class Http
      */
     public static function getMimeTypesFile()
     {
-        return __DIR__ . '/Http/mime.types';
+        return CMF_ROOT . '/vendor/workerman/workerman/Protocols/Http/mime.types';
     }
 
     /**
@@ -584,16 +584,17 @@ class Http
                                     $error = UPLOAD_ERR_CANT_WRITE;
                                 }
                             }
-                            if (!isset($files[$key])) {
-                                $files[$key] = array();
+                            if (!isset($_FILES[$match[1]])) {
+                                $_FILES[$match[1]] = array();
                             }
                             // Parse upload files.
-                            $files[$key] += array(
+                            $_FILES[$match[1]] += array(
                                 'key'      => $match[1],
                                 'name'     => $match[2],
                                 'tmp_name' => $tmp_file,
                                 'size'     => $size,
-                                'error'    => $error
+                                'error'    => $error,
+                                'type'     => \trim($header_value)
                             );
                             break;
                         } // Is post field.
@@ -606,7 +607,10 @@ class Http
                         break;
                     case "content-type":
                         // add file_type
-                        $_FILES[$key]['file_type'] = \trim($header_value);
+                        if (\preg_match('/name="(.*?)"$/', $header_value, $match)) {
+                            $_FILES[$match[1]]['type'] = \trim($header_value);
+                        }
+                        
                         break;
                 }
             }
