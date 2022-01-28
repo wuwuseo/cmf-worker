@@ -69,7 +69,14 @@ php think worker:server-ws
 
 默认会在0.0.0.0:9503开启一个websocket服务。
 
-如果需要自定义参数，可以在config/worker_server.php中进行配置，包括：
+如果想看demo然后就可以通过浏览器直接访问当前应用
+
+~~~
+http://localhost/demo/index/ws   (FPM)
+http://localhost:9501/demo/index/ws   (命令行 php think worker:web)
+~~~
+
+如果需要自定义参数，可以在config/worker_server_ws.php中进行配置，包括：
 
 配置参数 | 描述
 --- | ---
