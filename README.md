@@ -15,7 +15,7 @@ composer require wuwuseo/cmf-worker
 
 #### WEB
 
-在命令行启动WEB服务端
+在命令行启动WEB HTTP服务端
 ~~~
 php think worker:web
 ~~~
@@ -37,7 +37,7 @@ workerman的参数可以在应用配置目录下的worker_web.php里面配置。
 
 #### API
 
-在命令行启动WEB服务端
+在命令行启动API HTTP服务端
 ~~~
 php think worker:api
 ~~~
