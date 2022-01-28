@@ -6,6 +6,7 @@
             "email": "15093565100@613.com"
         }
     ],
+    "license": "MIT",
     "require": {
         "topthink/framework": "^6.0.0",
         "topthink/think-worker": "^3.0",
