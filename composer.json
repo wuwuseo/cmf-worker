@@ -18,7 +18,8 @@
         },
         "classmap": [
             "src/UploadedFile.php",
-            "src/Http.php"
+            "src/Http.php",
+            "src/Console.php"
         ]
     },
     "extra": {
