@@ -11,8 +11,8 @@
 declare (strict_types = 1);
 namespace think\trace;
 
-use think\App;
 use think\Response;
+use think\worker\Application;
 
 /**
  * 浏览器调试输出
@@ -36,7 +36,7 @@ class Console
      * @param  array     $log 日志信息
      * @return string|bool
      */
-    public function output(App $app, Response $response, array $log = [])
+    public function output(Application $app, Response $response, array $log = [])
     {
         $request     = $app->request;
         $contentType = $response->getHeader('Content-Type');
