@@ -16,5 +16,5 @@ return [
     'name'                  => 'thinkcmf-web',
     'count'                 => 4,
     'daemonize'             => false,
-    'pidFile'               => '',
+    'pidFile'               => 'thinkcmf-web-worker.pid',
 ];
